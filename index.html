@@ -1,29 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles/style.css">
-    <title>Hello from Electron renderer!</title>
+    <title>Todo List App</title>
+    <!-- Add a Google Font for better typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <main>
-    <div class="header">
-       <div id="mainHeader">Eda mone<br>Welcome to my Personal<br>To do list app</div>
-        <div id="subHeading">Dumb here,the things you may do</div>
-    </div>
-    <div class="container">
-        <div class="input">
-            <label for="inputTask"></label><input type="text" id="inputTask" placeholder="Enthan nee cheyyan udheshikkunath?">
-            <div class="btn" onclick="add()">
-                Procrastinate
+    <div class="appContainer">
+        <!--        <div class="mainContainer">-->
+        <header class="appHeader">
+            <h1 id="mainHeader">Eda mone</h1>
+            <p id="subHeading">Dumb here, the things you may do</p>
+        </header>
+
+        <div class="container">
+            <form class="inputContainer" onsubmit="add(); return false;">
+                <input
+                        type="text"
+                        id="inputTask"
+                        placeholder="Enthan nee cheyyan udheshikkunath?"
+                        aria-label="Enter your task"
+                        required
+                >
+                <div class="buttons">
+
+                    <button type="submit" id="proCast">Procrastinate</button>
+                    <button type="submit" id="delete">Delete</button>
+
+                </div>
+            </form>
+
+            <div class="taskSummary">
+                <div class="taskCounter">
+                    <p>Remaining tasks<span id="counter"></span></p>
+                </div>
             </div>
+
+            <ul class="listItems">
+
+            </ul>
         </div>
-        <div class="taskCounter"></div>
-        <div class="listItems"></div>
-
-
     </div>
 </main>
+<script src="src/renderer.js"></script>
+
 </body>
 </html>
