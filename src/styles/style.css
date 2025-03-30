@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins, sans-serif;
     background-color: #f5f8fa;
     color: #333;
     display: flex;
@@ -28,8 +28,6 @@ body {
     gap: 1rem;
     padding: 20px;
     overflow: hidden;
-
-
 }
 
 .inputContainer {
@@ -41,59 +39,55 @@ body {
     max-width: 500px;
     gap: 1rem;
 }
+
 .buttons {
     display: flex;
     gap: 15px;
     justify-content: center;
     align-items: center;
 }
+
 .buttons button {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-align: center;
-    font-weight: bold;
-    color: white;
+    font-weight: 700;
+    color: #fff;
     border: none;
     font-size: 16px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #proCast {
     background-color: #28e084;
-
 }
 
 #delete {
     background-color: grey;
-
 }
+
 #proCast:hover {
     background-color: #42f5f2;
-    color: black;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    color: #000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 #proCast:active {
     background-color: #4254f5;
-   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #delete:hover {
     background-color: #f0312e;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    color: #000;
 }
 
 #delete:active {
     background-color: #d81c19;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-#proCast:active {
-    background-color: #4254f5;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 #inputTask {
@@ -102,12 +96,11 @@ body {
     border: 2px solid #e1e4e8;
     border-radius: 6px;
     font-size: 1em;
-    /*transition: border-color 0.3s;*/
 }
 
 #inputTask:focus {
-    outline: none;
-    border-color: lightseagreen;
+    outline: 0;
+    border-color: #20b2aa;
     width: 100%;
 }
 
@@ -122,8 +115,7 @@ input[type="text"]:focus {
 
 #mainHeader {
     font-size: 1.5em;
-    font-weight: bold;
-
+    font-weight: 700;
 }
 
 .appHeader {
@@ -131,40 +123,71 @@ input[type="text"]:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #007BFF;
-    color: white;
+    background-color: #007bff;
+    color: #fff;
     padding: 10px 20px;
     border-radius: 10px 10px 0 0;
     text-align: center;
 }
-.taskSummary{
+
+.taskSummary {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
-
 }
-#counter {
 
-    font-weight: bold;
+#counter {
+    font-weight: 700;
     margin-left: 8px;
     background: #fff;
     color: #ff4d4d;
     padding: 3px 8px;
     border-radius: 5px;
 }
-.listItems{
+
+.listItems {
     list-style: none;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    border-radius: 10px;
+    gap: 1rem;
 }
+
 .listItems li {
-    box-shadow:0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
     width: 100%;
-    text-align: center;
-    padding: .5em;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.listItems li:hover {
+    background: lightseagreen;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.remove {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+
+.remove:hover {
+    color: darkred;
+    transform: scale(1.1);
 }
